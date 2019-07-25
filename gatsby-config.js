@@ -7,6 +7,14 @@
 module.exports = {
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `work`,
+        path: `${__dirname}/blog/`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'config/typography.js',
