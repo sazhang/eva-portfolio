@@ -5,12 +5,15 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Eva Maldonado`
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `work`,
-        path: `${__dirname}/blog/`,
+        path: `${__dirname}/content/`,
       },
     },
     `gatsby-transformer-remark`,
@@ -20,5 +23,6 @@ module.exports = {
         pathToConfigModule: 'config/typography.js',
       },
     },
+    `gatsby-plugin-postcss`
   ],
 }

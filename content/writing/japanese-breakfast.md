@@ -1,8 +1,6 @@
 ---
 title: "Japanese Breakfast’s Michelle Zauner has a full plate"
 date: "2017-08-21"
+publisher: "Boston Globe"
+link: "https://www.bostonglobe.com/arts/2019/03/28/japanese-breakfast-michelle-zauner-has-full-plate/pvdJcuwnzFdWpnAOwM73mM/story.html"
 ---
-
-Japanese Breakfast’s Michelle Zauner has a full plate.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4SZl1r2O_bY" frameborder="0" allowfullscreen></iframe>
