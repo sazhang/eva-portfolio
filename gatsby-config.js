@@ -9,6 +9,7 @@ module.exports = {
     title: `Eva Maldonado`
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,6 +24,5 @@ module.exports = {
         pathToConfigModule: 'config/typography.js',
       },
     },
-    `gatsby-plugin-postcss`
   ],
 }

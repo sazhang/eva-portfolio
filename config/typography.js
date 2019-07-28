@@ -2,7 +2,7 @@ import Typography from 'typography'
 
 // This website uses the system font stack after the placed "Lora" font
 // The scaleRatio will be overwritten for smaller breakpoints in src/components/Layout
-// - from LekoArts' gatsby-starter-prismic
+// - from https://github.com/LekoArts/gatsby-starter-prismic
 
 const typography = new Typography({
   title: 'Portfolio for Eva',

@@ -1,11 +1,18 @@
 import React from "react"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 import Header from "./header"
-import Footer from "./footer"
+
+const Container = styled.div`
+  margin: 3rem auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+`
 
 export default ({ children }) => (
-  <div style={{ margin: `3rem auto`, maxWidth: 1200, padding: `0 1rem` }}>
-      <Header></Header>
+  <Container>
+    <Header />
     {children}
-    <Footer></Footer>
-  </div>
+  </Container>
 )
