@@ -1,5 +1,5 @@
 ---
-title: "'Booksmahts?' Olivia Wilde and the BOOKSMART crew took a Duck Tour on the Charles, and our reporters went along for the ride."
+title: "\"Booksmahts?\" Olivia Wilde and the BOOKSMART crew took a Duck Tour on the Charles, and our reporters went along for the ride."
 date: "2017-08-21"
 ---
 

@@ -1,31 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { css } from "@emotion/core"
+import { MainVideos, HalfFlexVideo, VideoTitleWrapper } from "../styles/global"
 
 export default ({ data }) => {
   return (
     <Layout>
-      <main
-        css={css`
-          display: flex;
-          flex-wrap: wrap;
-          background: pink;
-        `}
-      >
+      <MainVideos>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div
-            key={node.id}
-            css={css`
-              width: 50%;
-              background: cornsilk;
-            `}
-          >
+          <HalfFlexVideo key={node.id}>
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            <span>{node.frontmatter.title} </span>
-          </div>
+            <VideoTitleWrapper>
+              <span>{node.frontmatter.title}</span>
+            </VideoTitleWrapper>
+          </HalfFlexVideo>
         ))}
-      </main>
+      </MainVideos>
     </Layout>
   )
 }

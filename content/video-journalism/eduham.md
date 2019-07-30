@@ -1,5 +1,5 @@
 ---
-title: "EduHam allows Boston Public School students to take the stage — and see "Hamilton" for just $10."
+title: "EduHam allows Boston Public School students to take the stage — and see \"Hamilton\" for just $10."
 date: "2017-08-21"
 ---
 

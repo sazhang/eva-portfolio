@@ -1,5 +1,5 @@
 ---
-title: "Ayanna Pressley speaks at a Democratic Unity Event following her historic win"
+title: "Ayanna Pressley speaks at a Democratic Unity Event following her historic win."
 date: "2017-08-21"
 ---
 

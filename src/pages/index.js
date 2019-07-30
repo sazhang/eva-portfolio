@@ -9,7 +9,6 @@ export default ({ data }) => {
       <main
         css={css`
           padding: 0 3rem;
-          background: powderblue;
         `}
       >
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />

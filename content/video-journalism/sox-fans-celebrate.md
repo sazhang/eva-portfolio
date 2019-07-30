@@ -1,5 +1,5 @@
 ---
-title: "Red Sox fans celebrated late into the night after another World Series victory"
+title: "Red Sox fans celebrated late into the night after another World Series victory."
 date: "2017-08-21"
 ---
 

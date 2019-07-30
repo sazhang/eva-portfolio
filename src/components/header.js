@@ -9,22 +9,22 @@ export default () => (
     </h3>
     <ul>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about" activeStyle={{ textDecoration: "underline" }}>About</Link>
       </li>
       <li>
         <span aria-haspopup="true">Work</span>
         <ul aria-label="submenu">
           <li>
-            <Link to="/video-journalism">Video Journalism</Link>
+            <Link to="/video-journalism" activeStyle={{ textDecoration: "underline" }}>Video Journalism</Link>
           </li>
           <li>
-            <Link to="/narrative-shorts">Narrative Shorts</Link>
+            <Link to="/narrative-shorts" activeStyle={{ textDecoration: "underline" }}>Narrative Shorts</Link>
           </li>
           <li>
-            <Link to="/music-video">Music Video</Link>
+            <Link to="/music-video" activeStyle={{ textDecoration: "underline" }}>Music Video</Link>
           </li>
           <li>
-            <Link to="/writing">Writing</Link>
+            <Link to="/writing" activeStyle={{ textDecoration: "underline" }}>Writing</Link>
           </li>
         </ul>
       </li>
@@ -34,14 +34,14 @@ export default () => (
       <li>
         <span>&mdash;</span>
       </li>
-      <li className="sm">
-        <a href="#">Email</a>
+      <li>
+        <a href="mailto:evahmaldonado@gmail.com">Email</a>
       </li>
-      <li className="sm">
-        <a href="#">LinkedIn</a>
+      <li>
+        <a href="https://www.linkedin.com/in/evamaldonado" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </li>
-      <li className="sm">
-        <a href="#">Twitter</a>
+      <li>
+        <a href="https://twitter.com/journalism4eva?lang=en" target="_blank" rel="noopener noreferrer">Twitter</a>
       </li>
     </ul>
   </Nav>
@@ -50,9 +50,8 @@ export default () => (
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  background: palegreen;
   z-index: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   a {
     text-decoration: none;
@@ -76,10 +75,6 @@ const Nav = styled.nav`
 
   li > a:hover {
     text-decoration: underline;
-  }
-
-  li.sm > a:hover {
-    text-decoration: none;
   }
 
   ul li ul {

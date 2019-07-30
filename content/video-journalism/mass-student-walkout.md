@@ -1,5 +1,5 @@
 ---
-title: "Mass. students join nationwide walkout over gun violence"
+title: "Mass. students join nationwide walkout over gun violence."
 date: "2017-08-21"
 ---
 
