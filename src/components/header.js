@@ -9,27 +9,39 @@ export default () => (
     </h3>
     <ul>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about" activeStyle={{ textDecoration: "underline" }}>About</Link>
       </li>
       <li>
         <span aria-haspopup="true">Work</span>
         <ul aria-label="submenu">
           <li>
-            <Link to="/video-journalism">Video Journalism</Link>
+            <Link to="/video-journalism" activeStyle={{ textDecoration: "underline" }}>Video Journalism</Link>
           </li>
           <li>
-            <Link to="/narrative-shorts">Narrative Shorts</Link>
+            <Link to="/narrative-shorts" activeStyle={{ textDecoration: "underline" }}>Narrative Shorts</Link>
           </li>
           <li>
-            <Link to="/music-video">Music Video</Link>
+            <Link to="/music-video" activeStyle={{ textDecoration: "underline" }}>Music Video</Link>
           </li>
           <li>
-            <Link to="/writing">Writing</Link>
+            <Link to="/writing" activeStyle={{ textDecoration: "underline" }}>Writing</Link>
           </li>
         </ul>
       </li>
       <li>
         <a href="#">Resume</a>
+      </li>
+      <li>
+        <span>&mdash;</span>
+      </li>
+      <li>
+        <a href="mailto:evahmaldonado@gmail.com">Email</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/evamaldonado" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/journalism4eva?lang=en" target="_blank" rel="noopener noreferrer">Twitter</a>
       </li>
     </ul>
   </Nav>
@@ -38,10 +50,8 @@ export default () => (
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-
-  h3 {
-    padding-top: 1rem;
-  }
+  z-index: 1;
+  margin-bottom: 2rem;
 
   a {
     text-decoration: none;
@@ -57,7 +67,7 @@ const Nav = styled.nav`
   li {
     display: block;
     float: left;
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
     position: relative;
     text-decoration: none;
     transition-duration: 0.5s;
@@ -67,20 +77,11 @@ const Nav = styled.nav`
     text-decoration: underline;
   }
 
-  li:hover,
-  li:focus-within {
-    text-decoration: underline;
-  }
-
-  li:focus-within a {
-    outline: none;
-  }
-
   ul li ul {
     background: white;
     visibility: hidden;
     opacity: 0;
-    min-width: 8rem;
+    min-width: 10rem;
     position: absolute;
     transition: all 0.5s ease;
     left: 0;

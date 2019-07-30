@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import Header from "./header"
 
 const Container = styled.div`
-  margin: 3rem auto;
+  margin: 2rem auto 4rem;
   max-width: 1200px;
   display: flex;
   flex-direction: column;

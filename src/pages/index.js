@@ -1,17 +1,27 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { css } from "@emotion/core"
 
-export default () => {
+export default ({ data }) => {
   return (
     <Layout>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Oy53FMAZiM4"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <main
+        css={css`
+          padding: 0 3rem;
+        `}
+      >
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      </main>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    markdownRemark(frontmatter: { title: { eq: "index" } }) {
+      id
+      html
+    }
+  }
+`

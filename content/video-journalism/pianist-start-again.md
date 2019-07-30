@@ -1,5 +1,5 @@
 ---
-title: "A promising pianist must start again"
+title: "A promising pianist must start again."
 date: "2017-08-21"
 ---
 

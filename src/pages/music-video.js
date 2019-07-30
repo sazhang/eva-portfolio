@@ -1,18 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { css } from "@emotion/core"
 
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <main
+        css={css`
+          padding: 0 3rem;
+        `}
+      >
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            <span>{node.frontmatter.title} </span>
           </div>
         ))}
-      </div>
+      </main>
     </Layout>
   )
 }
@@ -24,7 +28,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-        id
+          id
           html
           frontmatter {
             title

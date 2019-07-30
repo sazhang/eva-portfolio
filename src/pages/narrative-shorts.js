@@ -1,18 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { MainVideos, HalfFlexVideo } from "../styles/global"
 
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <MainVideos>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+          <HalfFlexVideo key={node.id}>
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            <span>{node.frontmatter.title} </span>
-          </div>
+          </HalfFlexVideo>
         ))}
-      </div>
+      </MainVideos>
     </Layout>
   )
 }
@@ -24,7 +24,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-        id
+          id
           html
           frontmatter {
             title
