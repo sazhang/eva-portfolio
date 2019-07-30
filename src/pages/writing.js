@@ -7,10 +7,9 @@ const Article = styled.div`
   margin: 0 1rem 2rem;
 
   @media (min-width: 1024px) { 
-    width: 50%;
     margin: 0 3rem 2rem;
   }
-  
+
   a {
     color: inherit;
   }
