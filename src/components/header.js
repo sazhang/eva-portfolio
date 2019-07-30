@@ -9,22 +9,41 @@ export default () => (
     </h3>
     <ul>
       <li>
-        <Link to="/about" activeStyle={{ textDecoration: "underline" }}>About</Link>
+        <Link to="/about" activeStyle={{ textDecoration: "underline" }}>
+          About
+        </Link>
       </li>
       <li>
         <span aria-haspopup="true">Work</span>
         <ul aria-label="submenu">
           <li>
-            <Link to="/video-journalism" activeStyle={{ textDecoration: "underline" }}>Video Journalism</Link>
+            <Link
+              to="/video-journalism"
+              activeStyle={{ textDecoration: "underline" }}
+            >
+              Video Journalism
+            </Link>
           </li>
           <li>
-            <Link to="/narrative-shorts" activeStyle={{ textDecoration: "underline" }}>Narrative Shorts</Link>
+            <Link
+              to="/narrative-shorts"
+              activeStyle={{ textDecoration: "underline" }}
+            >
+              Narrative Shorts
+            </Link>
           </li>
           <li>
-            <Link to="/music-video" activeStyle={{ textDecoration: "underline" }}>Music Video</Link>
+            <Link
+              to="/music-video"
+              activeStyle={{ textDecoration: "underline" }}
+            >
+              Music Video
+            </Link>
           </li>
           <li>
-            <Link to="/writing" activeStyle={{ textDecoration: "underline" }}>Writing</Link>
+            <Link to="/writing" activeStyle={{ textDecoration: "underline" }}>
+              Writing
+            </Link>
           </li>
         </ul>
       </li>
@@ -38,10 +57,22 @@ export default () => (
         <a href="mailto:evahmaldonado@gmail.com">Email</a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/evamaldonado" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a
+          href="https://www.linkedin.com/in/evamaldonado"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
       </li>
       <li>
-        <a href="https://twitter.com/journalism4eva?lang=en" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a
+          href="https://twitter.com/journalism4eva?lang=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Twitter
+        </a>
       </li>
     </ul>
   </Nav>
@@ -49,9 +80,13 @@ export default () => (
 
 const Nav = styled.nav`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   z-index: 1;
-  margin-bottom: 2rem;
+  margin: 0 1rem;
+  @media (min-width: 1024px) { 
+    margin: 0 0 2rem;
+  }
 
   a {
     text-decoration: none;
