@@ -5,8 +5,12 @@ import Layout from "../components/layout"
 import { css } from "@emotion/core"
 
 const half = css`
-  width: 50%;
-  padding: 0 1.5rem;
+  width: 100%;
+  padding: 0 0 1rem;
+  @media (min-width: 1024px) { 
+    width: 50%;
+    padding: 0 1.5rem;
+  }
 `
 
 export default () => (
@@ -27,9 +31,13 @@ export default () => (
         <main
           css={css`
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin: 0 1.5rem;
+            margin: 0 1rem;
+            @media (min-width: 1024px) { 
+              margin: 0 1.5rem;
+            }
           `}
         >
           <div css={half}>

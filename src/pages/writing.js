@@ -1,31 +1,68 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import styled from "@emotion/styled"
+
+const Article = styled.div`
+  margin: 0 1rem 2rem;
+
+  @media (min-width: 1024px) { 
+    width: 50%;
+    margin: 0 3rem 2rem;
+  }
+  
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: grey;
+  }
+
+  span {
+    color: grey;
+    font-style: italic;
+  }
+`
 
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <main>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            <span>{node.frontmatter.title} </span>
-          </div>
+          <Article key={node.id}>
+            <span>
+              {node.frontmatter.date} - {node.frontmatter.publisher}
+            </span>
+            <br />
+            <a
+              href={node.frontmatter.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {node.frontmatter.title}
+            </a>
+          </Article>
         ))}
-      </div>
+      </main>
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/writing/" } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/writing/" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           id
-          html
           frontmatter {
             title
+            date
+            publisher
+            link
           }
         }
       }
