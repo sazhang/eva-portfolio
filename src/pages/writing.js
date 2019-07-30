@@ -19,12 +19,10 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/writing/" } }
-    ) {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/writing/" } }) {
       edges {
         node {
-        id
+          id
           html
           frontmatter {
             title

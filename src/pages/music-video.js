@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { css } from "@emotion/core"
 
 export default ({ data }) => {
   return (
@@ -24,7 +25,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-        id
+          id
           html
           frontmatter {
             title

@@ -31,6 +31,18 @@ export default () => (
       <li>
         <a href="#">Resume</a>
       </li>
+      <li>
+        <span>&mdash;</span>
+      </li>
+      <li className="sm">
+        <a href="#">Email</a>
+      </li>
+      <li className="sm">
+        <a href="#">LinkedIn</a>
+      </li>
+      <li className="sm">
+        <a href="#">Twitter</a>
+      </li>
     </ul>
   </Nav>
 )
@@ -38,10 +50,9 @@ export default () => (
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-
-  h3 {
-    padding-top: 1rem;
-  }
+  background: palegreen;
+  z-index: 1;
+  margin-bottom: 1rem;
 
   a {
     text-decoration: none;
@@ -57,7 +68,7 @@ const Nav = styled.nav`
   li {
     display: block;
     float: left;
-    padding: 0 1rem;
+    padding: 0 0 0 1rem;
     position: relative;
     text-decoration: none;
     transition-duration: 0.5s;
@@ -67,20 +78,15 @@ const Nav = styled.nav`
     text-decoration: underline;
   }
 
-  li:hover,
-  li:focus-within {
-    text-decoration: underline;
-  }
-
-  li:focus-within a {
-    outline: none;
+  li.sm > a:hover {
+    text-decoration: none;
   }
 
   ul li ul {
     background: white;
     visibility: hidden;
     opacity: 0;
-    min-width: 8rem;
+    min-width: 10rem;
     position: absolute;
     transition: all 0.5s ease;
     left: 0;
