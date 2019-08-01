@@ -9,7 +9,7 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: [
-    'Lora',
+    'Quattrocento Sans',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
@@ -22,7 +22,7 @@ const typography = new Typography({
     'Segoe UI Symbol',
   ],
   bodyFontFamily: [
-    'Lora',
+    'Quattrocento Sans',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
