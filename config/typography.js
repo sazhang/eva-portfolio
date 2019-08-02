@@ -9,7 +9,7 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: [
-    'Quattrocento Sans',
+    'Josefin Sans',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',

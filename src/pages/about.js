@@ -3,11 +3,12 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import { css } from "@emotion/core"
+import { Helmet } from "react-helmet"
 
 const half = css`
   width: 100%;
   padding: 0 0 1rem;
-  @media (min-width: 1024px) { 
+  @media (min-width: 1024px) {
     width: 50%;
     padding: 0 1.5rem;
   }
@@ -28,6 +29,11 @@ export default () => (
     `}
     render={data => (
       <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Eva Maldonado</title>
+          <link rel="canonical" href="https://evahmaldonado.com/about" />
+        </Helmet>
         <main
           css={css`
             display: flex;
@@ -35,7 +41,7 @@ export default () => (
             justify-content: center;
             align-items: center;
             margin: 0 1rem;
-            @media (min-width: 1024px) { 
+            @media (min-width: 1024px) {
               margin: 0 1.5rem;
             }
           `}

@@ -1,82 +1,97 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 
-export default () => (
-  <Nav role="navigation">
-    <h3>
-      <Link to="/">Eva Maldonado</Link>
-    </h3>
-    <ul>
-      <li>
-        <Link to="/about" activeStyle={{ textDecoration: "underline" }}>
-          About
-        </Link>
-      </li>
-      <li>
-        <span aria-haspopup="true">Work</span>
-        <ul aria-label="submenu">
-          <li>
-            <Link
-              to="/video-journalism"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Video Journalism
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/narrative-shorts"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Narrative Shorts
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/music-video"
-              activeStyle={{ textDecoration: "underline" }}
-            >
-              Music Video
-            </Link>
-          </li>
-          <li>
-            <Link to="/writing" activeStyle={{ textDecoration: "underline" }}>
-              Writing
-            </Link>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Resume</a>
-      </li>
-      <li>
-        <span>&mdash;</span>
-      </li>
-      <li>
-        <a href="mailto:evahmaldonado@gmail.com">Email</a>
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/evamaldonado"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/journalism4eva?lang=en"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Twitter
-        </a>
-      </li>
-    </ul>
-  </Nav>
-)
+const Header = () => {
+  const resume = useStaticQuery(graphql`
+    {
+      file(extension: { eq: "pdf" }) {
+        id
+        publicURL
+      }
+    }
+  `)
+
+  return (
+    <Nav role="navigation">
+      <h3>
+        <Link to="/">Eva Maldonado</Link>
+      </h3>
+      <ul>
+        <li>
+          <Link to="/about" activeStyle={{ textDecoration: "underline" }}>
+            About
+          </Link>
+        </li>
+        <li>
+          <span aria-haspopup="true">Work</span>
+          <ul aria-label="submenu">
+            <li>
+              <Link
+                to="/video-journalism"
+                activeStyle={{ textDecoration: "underline" }}
+              >
+                Video Journalism
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/narrative-shorts"
+                activeStyle={{ textDecoration: "underline" }}
+              >
+                Narrative Shorts
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/music-video"
+                activeStyle={{ textDecoration: "underline" }}
+              >
+                Music Video
+              </Link>
+            </li>
+            <li>
+              <Link to="/writing" activeStyle={{ textDecoration: "underline" }}>
+                Writing
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href={resume.file.publicURL} target="_blank">
+            Resume
+          </a>
+        </li>
+        <li>
+          <span>&mdash;</span>
+        </li>
+        <li>
+          <a href="mailto:evahmaldonado@gmail.com">Email</a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/evamaldonado"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/journalism4eva?lang=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </Nav>
+  )
+}
+export default Header
 
 const Nav = styled.nav`
   display: flex;
@@ -84,7 +99,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   z-index: 1;
   margin: 0 1rem;
-  @media (min-width: 1024px) { 
+  @media (min-width: 1024px) {
     margin: 0 0 2rem;
   }
 

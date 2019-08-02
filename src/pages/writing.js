@@ -2,11 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
+import { Helmet } from "react-helmet"
 
 const Article = styled.div`
   margin: 0 1rem 2rem;
 
-  @media (min-width: 1024px) { 
+  @media (min-width: 1024px) {
     margin: 0 3rem 2rem;
   }
 
@@ -27,6 +28,11 @@ const Article = styled.div`
 export default ({ data }) => {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Eva Maldonado</title>
+        <link rel="canonical" href="https://evahmaldonado.com/writing" />
+      </Helmet>
       <main>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Article key={node.id}>
