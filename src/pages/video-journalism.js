@@ -33,6 +33,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/video-journalism/" } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
