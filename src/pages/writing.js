@@ -1,29 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import styled from "@emotion/styled"
 import { Helmet } from "react-helmet"
-
-const Article = styled.div`
-  margin: 0 1rem 2rem;
-
-  @media (min-width: 1024px) {
-    margin: 0 3rem 2rem;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  a:hover {
-    color: grey;
-  }
-
-  span {
-    color: grey;
-    font-style: italic;
-  }
-`
 
 export default ({ data }) => {
   return (
@@ -35,7 +13,7 @@ export default ({ data }) => {
       </Helmet>
       <main>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Article key={node.id}>
+          <div className="writing" key={node.id}>
             <span>
               {node.frontmatter.date} - {node.frontmatter.publisher}
             </span>
@@ -47,7 +25,7 @@ export default ({ data }) => {
             >
               {node.frontmatter.title}
             </a>
-          </Article>
+          </div>
         ))}
       </main>
     </Layout>

@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { MainVideos, HalfFlexVideo } from "../styles/global"
 import { Helmet } from "react-helmet"
 
 export default ({ data }) => {
@@ -15,13 +14,13 @@ export default ({ data }) => {
           href="https://evahmaldonado.com/narrative-shorts"
         />
       </Helmet>
-      <MainVideos>
+      <section className="flex-parent">
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <HalfFlexVideo key={node.id}>
+          <div key={node.id} className="flex-child">
             <div dangerouslySetInnerHTML={{ __html: node.html }} />
-          </HalfFlexVideo>
+          </div>
         ))}
-      </MainVideos>
+      </section>
     </Layout>
   )
 }
