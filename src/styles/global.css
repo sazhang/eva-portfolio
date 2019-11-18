@@ -78,6 +78,15 @@ section.about p {
   font-style: italic;
 }
 
+/* 404 error page styles */
+.error a:link {
+  text-decoration: underline;
+}
+
+.error a:hover {
+  opacity: 0.6;
+}
+
 /* mobile - header styles */
 .navbar {
   padding: calc(var(--base-unit) * 2);
