@@ -12,11 +12,14 @@ export default ({ data }) => {
         <link rel="canonical" href="https://evahmaldonado.com/music-video" />
       </Helmet>
       <section>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-          </div>
-        ))}
+        <h2>Music Video</h2>
+        <div>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id}>
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          ))}
+        </div>
       </section>
     </Layout>
   )

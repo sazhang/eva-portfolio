@@ -14,12 +14,16 @@ export default ({ data }) => {
           href="https://evahmaldonado.com/narrative-shorts"
         />
       </Helmet>
-      <section className="flex-parent">
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id} className="flex-child">
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-          </div>
-        ))}
+      <section>
+        <h2>Narrative Shorts</h2>
+        <div className="flex-parent">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} className="flex-child">
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+              <span className="video-caption">{node.frontmatter.title}</span>
+            </div>
+          ))}
+        </div>
       </section>
     </Layout>
   )

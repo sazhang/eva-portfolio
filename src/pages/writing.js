@@ -11,7 +11,8 @@ export default ({ data }) => {
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/writing" />
       </Helmet>
-      <main>
+      <section>
+        <h2>Writing</h2>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div className="writing" key={node.id}>
             <span>
@@ -27,7 +28,7 @@ export default ({ data }) => {
             </a>
           </div>
         ))}
-      </main>
+      </section>
     </Layout>
   )
 }
