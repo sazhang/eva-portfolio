@@ -24,10 +24,7 @@ export default () => (
           <title>Eva Maldonado</title>
           <link rel="canonical" href="https://evahmaldonado.com/about" />
         </Helmet>
-        <section className="flex-parent">
-          <div className="flex-child">
-            <Img fluid={data.headshot.childImageSharp.fluid} />
-          </div>
+        <section className="flex-parent about">
           <div className="flex-child">
             <p>
               Eva is a videographer, writer, and director who is currently working
@@ -43,6 +40,9 @@ export default () => (
               cat, Kevin MacLeod, female villains, magic realism, and magic (not
               realism).
             </p>
+          </div>
+          <div className="flex-child">
+            <Img fluid={data.headshot.childImageSharp.fluid} className="img-about" />
           </div>
         </section>
       </Layout>
