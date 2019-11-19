@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { css } from "@emotion/core"
 import { Helmet } from "react-helmet"
 
 export default ({ data }) => {
@@ -11,21 +10,22 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/music-video" />
+        <meta 
+          name="description" 
+          content="Music video by Eva Maldonado - a videographer, writer, and director" 
+        />
+        <html lang="en" amp />
       </Helmet>
-      <main
-        css={css`
-          padding: 0 1rem;
-          @media (min-width: 1024px) {
-            padding: 0 3rem;
-          }
-        `}
-      >
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-          </div>
-        ))}
-      </main>
+      <section>
+        <h2>Music Video</h2>
+        <div>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id}>
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          ))}
+        </div>
+      </section>
     </Layout>
   )
 }

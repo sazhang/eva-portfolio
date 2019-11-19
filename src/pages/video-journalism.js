@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { MainVideos, HalfFlexVideo, VideoTitleWrapper } from "../styles/global"
 import { Helmet } from "react-helmet"
 
 export default ({ data }) => {
@@ -14,17 +13,23 @@ export default ({ data }) => {
           rel="canonical"
           href="https://evahmaldonado.com/video-journalism"
         />
+        <meta 
+          name="description" 
+          content="Video journalism for The Wall Street Journal and The Boston Globe by Eva Maldonado - a videographer, writer, and director" 
+        />
+        <html lang="en" amp />
       </Helmet>
-      <MainVideos>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <HalfFlexVideo key={node.id}>
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            <VideoTitleWrapper>
-              <span>{node.frontmatter.title}</span>
-            </VideoTitleWrapper>
-          </HalfFlexVideo>
-        ))}
-      </MainVideos>
+      <section>
+        <h2>Video Journalism</h2>
+        <div className="flex-parent">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} className="flex-child">
+              <div dangerouslySetInnerHTML={{ __html: node.html }}/>
+              <span className="video-caption">{node.frontmatter.title}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </Layout>
   )
 }

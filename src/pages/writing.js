@@ -1,29 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import styled from "@emotion/styled"
 import { Helmet } from "react-helmet"
-
-const Article = styled.div`
-  margin: 0 1rem 2rem;
-
-  @media (min-width: 1024px) {
-    margin: 0 3rem 2rem;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  a:hover {
-    color: grey;
-  }
-
-  span {
-    color: grey;
-    font-style: italic;
-  }
-`
 
 export default ({ data }) => {
   return (
@@ -32,10 +10,16 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/writing" />
+        <meta 
+          name="description" 
+          content="Writing for The Boston Globe by Eva Maldonado - a videographer, writer, and director" 
+        />
+        <html lang="en" amp />
       </Helmet>
-      <main>
+      <section>
+        <h2>Writing</h2>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Article key={node.id}>
+          <div className="writing" key={node.id}>
             <span>
               {node.frontmatter.date} - {node.frontmatter.publisher}
             </span>
@@ -47,9 +31,9 @@ export default ({ data }) => {
             >
               {node.frontmatter.title}
             </a>
-          </Article>
+          </div>
         ))}
-      </main>
+      </section>
     </Layout>
   )
 }
