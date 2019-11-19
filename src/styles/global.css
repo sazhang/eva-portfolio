@@ -62,8 +62,9 @@ section > h2 {
 }
 
 /* about page styles */
-section.about {
+.flex-parent.about {
   justify-content: center;
+  align-items: center;
 }
 
 section.about p {

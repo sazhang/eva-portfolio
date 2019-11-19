@@ -30,9 +30,9 @@ export default () => (
           <html lang="en" amp />
         </Helmet>
         <section>
-          <h2>About</h2>
           <div className="flex-parent about">
             <div className="flex-child">
+              <h2>About</h2>
               <p>
                 Eva is a videographer, writer, and director who is currently working
                 as a summer intern for the video team at the Wall Street Journal.
