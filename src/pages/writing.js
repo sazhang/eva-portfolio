@@ -10,6 +10,7 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/writing" />
+        <html lang="en" amp />
       </Helmet>
       <section>
         <h2>Writing</h2>

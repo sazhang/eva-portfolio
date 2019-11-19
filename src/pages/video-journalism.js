@@ -13,6 +13,7 @@ export default ({ data }) => {
           rel="canonical"
           href="https://evahmaldonado.com/video-journalism"
         />
+        <html lang="en" amp />
       </Helmet>
       <section>
         <h2>Video Journalism</h2>

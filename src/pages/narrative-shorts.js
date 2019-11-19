@@ -13,6 +13,7 @@ export default ({ data }) => {
           rel="canonical"
           href="https://evahmaldonado.com/narrative-shorts"
         />
+        <html lang="en" amp />
       </Helmet>
       <section>
         <h2>Narrative Shorts</h2>

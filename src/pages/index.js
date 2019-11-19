@@ -10,6 +10,11 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/" />
+        <meta 
+          name="description" 
+          content="Eva is a videographer, writer, and director who is currently working as a summer intern for the video team at the Wall Street Journal." 
+        />
+        <html lang="en" amp />
       </Helmet>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
