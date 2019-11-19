@@ -16,6 +16,13 @@ body {
   color: var(--nord0-color);
 }
 
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 a:link,
 a:visited {
   color: var(--nord0-color);
@@ -107,14 +114,14 @@ section.about p {
   text-decoration: none;
 }
 
-#hamburger {
+.hamburger {
   height: 32px;
   border: none;
   background: white;
   cursor: pointer;
 }
 
-#hamburger:hover {
+.hamburger:hover {
   opacity: 0.6;
 }
 
@@ -178,7 +185,7 @@ section.about p {
   }
 
   /* desktop - header styles */
-  #hamburger {
+  .hamburger {
     display: none;
   }
 

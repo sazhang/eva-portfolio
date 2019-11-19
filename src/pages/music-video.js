@@ -10,6 +10,10 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/music-video" />
+        <meta 
+          name="description" 
+          content="Music video by Eva Maldonado - a videographer, writer, and director" 
+        />
         <html lang="en" amp />
       </Helmet>
       <section>

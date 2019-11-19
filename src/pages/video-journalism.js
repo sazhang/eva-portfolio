@@ -13,6 +13,10 @@ export default ({ data }) => {
           rel="canonical"
           href="https://evahmaldonado.com/video-journalism"
         />
+        <meta 
+          name="description" 
+          content="Video journalism for The Wall Street Journal and The Boston Globe by Eva Maldonado - a videographer, writer, and director" 
+        />
         <html lang="en" amp />
       </Helmet>
       <section>

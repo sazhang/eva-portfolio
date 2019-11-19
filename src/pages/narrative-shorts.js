@@ -13,6 +13,10 @@ export default ({ data }) => {
           rel="canonical"
           href="https://evahmaldonado.com/narrative-shorts"
         />
+        <meta 
+          name="description" 
+          content="Narrative shorts by Eva Maldonado - a videographer, writer, and director" 
+        />
         <html lang="en" amp />
       </Helmet>
       <section>

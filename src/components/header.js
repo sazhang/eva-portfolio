@@ -4,16 +4,28 @@ import { Link, StaticQuery, graphql } from "gatsby"
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.handleFirstTab = this.handleFirstTab.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.state = {
       collapsed: true,
     };
   }
 
+  handleFirstTab(e) {
+    if (e.keyCode === 9) { // the "I am a keyboard user" key
+      document.body.classList.add('user-is-tabbing');
+      window.removeEventListener('keydown', this.handleFirstTab);
+    }
+  }
+
   toggleMenu() {
     this.setState({
       collapsed: !this.state.collapsed,
     });
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleFirstTab);
   }
 
   render() {
@@ -34,7 +46,7 @@ class Header extends React.Component {
             <nav className="navbar">
               <div className="nav-mobile">
                 <h3 className="home"><Link to="/">Eva Maldonado</Link></h3>
-                <button id="hamburger" onClick={this.toggleMenu}>
+                <button className="hamburger" aria-label="menu" onClick={this.toggleMenu}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
               </div>

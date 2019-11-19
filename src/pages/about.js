@@ -23,6 +23,10 @@ export default () => (
           <meta charSet="utf-8" />
           <title>Eva Maldonado</title>
           <link rel="canonical" href="https://evahmaldonado.com/about" />
+          <meta 
+            name="description" 
+            content="About Eva Maldonado - a videographer, writer, and director" 
+          />
           <html lang="en" amp />
         </Helmet>
         <section>

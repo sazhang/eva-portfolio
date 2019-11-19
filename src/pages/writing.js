@@ -10,6 +10,10 @@ export default ({ data }) => {
         <meta charSet="utf-8" />
         <title>Eva Maldonado</title>
         <link rel="canonical" href="https://evahmaldonado.com/writing" />
+        <meta 
+          name="description" 
+          content="Writing for The Boston Globe by Eva Maldonado - a videographer, writer, and director" 
+        />
         <html lang="en" amp />
       </Helmet>
       <section>
