@@ -35,7 +35,7 @@ a:hover {
 }
 
 .container {
-  padding: calc(var(--base-unit) * 2);
+  padding: calc(var(--base-unit) * 2) var(--base-unit);
   max-width: 1312px;
   margin: auto;
 }
@@ -64,7 +64,7 @@ section > h2 {
 /* about page styles */
 .flex-parent.about {
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
 section.about p {
@@ -72,7 +72,8 @@ section.about p {
 }
 
 .img-about {
-  max-width: 560px;
+  width: 100%;
+  max-width: 512px;
   margin: auto;
 }
 
@@ -97,7 +98,7 @@ section.about p {
 
 /* mobile - header styles */
 .navbar {
-  padding: calc(var(--base-unit) * 2);
+  padding: calc(var(--base-unit) * 2) var(--base-unit);
 }
 
 .nav-mobile {
@@ -180,6 +181,11 @@ section.about p {
 }
 
 @media only screen and (min-width: 768px) {
+  .container {
+    padding-left: calc(var(--base-unit) * 2);
+    padding-right: calc(var(--base-unit) * 2);
+  }
+
   /* desktop - global styles */
   .flex-child {
     width: 50%;
@@ -208,6 +214,8 @@ section.about p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-left: calc(var(--base-unit) * 2);
+    padding-right: calc(var(--base-unit) * 2);
   }
 
   .navbar li {
