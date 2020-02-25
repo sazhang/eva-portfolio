@@ -11,16 +11,16 @@ export default ({ data }) => {
         <title>Eva Maldonado</title>
         <link
           rel="canonical"
-          href="https://evahmaldonado.com/narrative-shorts"
+          href="https://evahmaldonado.com/nonfiction-video"
         />
         <meta
           name="description"
-          content="Narrative shorts by Eva Maldonado - a videographer, writer, and director"
+          content="Video journalism for The Wall Street Journal and The Boston Globe by Eva Maldonado - a videographer, writer, and director"
         />
         <html lang="en" amp />
       </Helmet>
       <section>
-        <h2>Narrative Shorts</h2>
+        <h2>Nonfiction Video</h2>
         <div className="flex-parent">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className="flex-child">
@@ -37,7 +37,8 @@ export default ({ data }) => {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/narrative-shorts/" } }
+      filter: { fileAbsolutePath: { regex: "/nonfiction-video/" } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {

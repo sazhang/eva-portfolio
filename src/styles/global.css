@@ -77,6 +77,16 @@ section.about p {
   margin: auto;
 }
 
+.about-list {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2rem;
+}
+
+.about-list-header {
+  margin-bottom: calc(1.45rem / 2);
+}
+
 /* writing work styles */
 .writing {
   margin-bottom: var(--base-unit);

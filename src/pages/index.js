@@ -50,7 +50,36 @@ export default () => (
                 help out with your project, whether it’s remote or in the NYC
                 area. Feel free to reach out!
               </p>
-              <p>Contact me: EvaHMaldonado@gmail.com</p>
+              <h4>
+                Contact me:{" "}
+                <a
+                  href="mailto:evahmaldonado@gmail.com"
+                  aria-label="Send Eva an email"
+                >
+                  EvaHMaldonado@gmail.com
+                </a>
+              </h4>
+              <div>
+                <div className="about-list">
+                  <h4 className="about-list-header">Work featured in:</h4>
+                  <ul>
+                    <li>The Wall Street Journal</li>
+                    <li>The Boston Globe</li>
+                    <li>Sidney Gish</li>
+                    <li>New England Conservatory</li>
+                  </ul>
+                </div>
+                <div className="about-list">
+                  <h4 className="about-list-header">Skills:</h4>
+                  <ul>
+                    <li>Premiere</li>
+                    <li>DaVinci Resolve</li>
+                    <li>Photoshop</li>
+                    <li>AfterEffects</li>
+                    <li>Lightroom</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div className="flex-child">
               <Img
