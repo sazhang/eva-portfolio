@@ -86,6 +86,14 @@ class Header extends React.Component {
                     </li>
                     <li>
                       <Link
+                        to="/social-video"
+                        activeStyle={{ textDecoration: "underline" }}
+                      >
+                        Social Video
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         to="/narrative"
                         activeStyle={{ textDecoration: "underline" }}
                       >

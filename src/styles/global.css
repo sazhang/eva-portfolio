@@ -61,6 +61,11 @@ section > h2 {
   margin-top: calc(var(--base-unit) / 2);
 }
 
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* about page styles */
 .flex-parent.about {
   justify-content: center;
